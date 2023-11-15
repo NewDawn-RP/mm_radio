@@ -2,51 +2,51 @@ Shared.MaxFrequency = 500.00 -- Max Limit of Radio Channel
 
 Shared.RadioItem = "radio"
 
-Shared.JobUsingCallsign = { 
+Shared.JobUsingCallsign = {  -- affichage matricules sur overlay 
     ["police"] = true, 
     ["ambulance"] = true, 
 }
 
 Shared.RestrictedChannels = {
-    [1] = { -- channel id
+    [1] = { -- channel id POLICE 
         type = 'job', -- job/gang
         name = {"police"}
     },
-    [2] = { -- channel id
+    [2] = { -- channel id POLICE 2
         type = 'job', -- job/gang
         name = {"police"}
     },
-    [3] = { -- channel id
+    [3] = { -- channel id POLICE ACCES POMPIER & EMS
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"police", "ambulance", "pompier"}
     },
-    [4] = { -- channel id
+    [4] = { -- channel id EMS PRINCIPAL ACCES POMPIER & POLICE
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"ambulance", "police", "pompier"}
     },
-    [5] = { -- channel id
+    [5] = { -- channel id EMS SECONDAIRE (EXCLUSIVE)
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"ambulance"}
     },
-    [6] = { -- channel id
+    [6] = { -- channel id POMPIER PRINCIPAL ACCES POLICE & EMS
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"pompier", "police", "ambulance"}
     },
-    [7] = { -- channel id
+    [7] = { -- channel id POMPIER SECONDAIRE (EXCLUSIVE)
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"pompier"}
     },
-    [8] = { -- channel id
+    [8] = { -- channel id RADIO INUTILISEE ACCES POMPIER EMS POLICE
         type = 'job', -- job/gang
         name = {"police", "ambulance"}
     },
-    [9] = { -- channel id
+    [9] = { -- channel id GOUVERNEMENT ONLY
         type = 'job', -- job/gang
-        name = {"ambulance"}
+        name = {"gouv"}
     },
-    [10] = { -- channel id
+    [10] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
         type = 'job', -- job/gang
-        name = {"ambulance"}
+        name = {"gouv", "ambulance", "police", "pompier"}
     },
     -- [420] = { -- channel id
     --     type = 'gang', -- job/gang
