@@ -4,6 +4,7 @@ Shared.RadioItem = "radio"
 
 Shared.JobUsingCallsign = {  -- affichage matricules sur overlay 
     ["police"] = true, 
+    ["bcso"] = true, 
     ["ambulance"] = true, 
 }
 
