@@ -18,11 +18,11 @@ Shared.RestrictedChannels = {
     },
     [3] = { -- channel id POLICE ACCES POMPIER & EMS
         type = 'job', -- job/gang
-        name = {"police", "ambulance", "pompier"}
+        name = {"police", "ambulance", "pompier", "bcso"}
     },
     [4] = { -- channel id EMS PRINCIPAL ACCES POMPIER & POLICE
         type = 'job', -- job/gang
-        name = {"ambulance", "police", "pompier"}
+        name = {"ambulance", "police", "pompier", "bcso"}
     },
     [5] = { -- channel id EMS SECONDAIRE (EXCLUSIVE)
         type = 'job', -- job/gang
@@ -30,7 +30,7 @@ Shared.RestrictedChannels = {
     },
     [6] = { -- channel id POMPIER PRINCIPAL ACCES POLICE & EMS
         type = 'job', -- job/gang
-        name = {"pompier", "police", "ambulance"}
+        name = {"pompier", "police", "ambulance", "bcso"}
     },
     [7] = { -- channel id POMPIER SECONDAIRE (EXCLUSIVE)
         type = 'job', -- job/gang
@@ -38,7 +38,7 @@ Shared.RestrictedChannels = {
     },
     [8] = { -- channel id RADIO INUTILISEE ACCES POMPIER EMS POLICE
         type = 'job', -- job/gang
-        name = {"police", "ambulance"}
+        name = {"police", "ambulance", "bcso"}
     },
     [9] = { -- channel id GOUVERNEMENT ONLY
         type = 'job', -- job/gang
@@ -46,7 +46,15 @@ Shared.RestrictedChannels = {
     },
     [10] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
         type = 'job', -- job/gang
-        name = {"gouv", "ambulance", "police", "pompier"}
+        name = {"gouv", "ambulance", "police", "pompier", "bcso"}
+    },
+    [11] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
+        type = 'job', -- job/gang
+        name = {"bcso"}
+    },
+    [12] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
+        type = 'job', -- job/gang
+        name = {"police", "bcso"}
     },
     -- [420] = { -- channel id
     --     type = 'gang', -- job/gang
