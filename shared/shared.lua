@@ -11,35 +11,35 @@ Shared.JobUsingCallsign = {  -- affichage matricules sur overlay
 Shared.RestrictedChannels = {
     [1] = { -- channel id POLICE 
         type = 'job', -- job/gang
-        name = {"police"}
+        name = {"police", "bcso"}
     },
     [2] = { -- channel id POLICE 2
         type = 'job', -- job/gang
         name = {"police"}
     },
-    [3] = { -- channel id POLICE ACCES POMPIER & EMS
+    [3] = { -- channel id BCSO 1
         type = 'job', -- job/gang
-        name = {"police", "ambulance", "pompier", "bcso"}
+        name = {"police", "bcso"}
     },
-    [4] = { -- channel id EMS PRINCIPAL ACCES POMPIER & POLICE
+    [4] = { -- channel id BCSO 2
         type = 'job', -- job/gang
-        name = {"ambulance", "police", "pompier", "bcso"}
+        name = {"bcso"}
     },
-    [5] = { -- channel id EMS SECONDAIRE (EXCLUSIVE)
-        type = 'job', -- job/gang
-        name = {"ambulance"}
-    },
-    [6] = { -- channel id POMPIER PRINCIPAL ACCES POLICE & EMS
+    [5] = { -- channel id EMS 1
         type = 'job', -- job/gang
         name = {"pompier", "police", "ambulance", "bcso"}
     },
-    [7] = { -- channel id POMPIER SECONDAIRE (EXCLUSIVE)
+    [6] = { -- channel id EMS 2
+        type = 'job', -- job/gang
+        name = {"ambulance"}
+    },
+    [7] = { -- channel id POMPIER 1
+        type = 'job', -- job/gang
+        name = {"pompier", "police", "ambulance", "bcso"}
+    },
+    [8] = { -- channel id POMPIER 2
         type = 'job', -- job/gang
         name = {"pompier"}
-    },
-    [8] = { -- channel id RADIO INUTILISEE ACCES POMPIER EMS POLICE
-        type = 'job', -- job/gang
-        name = {"police", "ambulance", "bcso"}
     },
     [9] = { -- channel id GOUVERNEMENT ONLY
         type = 'job', -- job/gang
@@ -49,14 +49,7 @@ Shared.RestrictedChannels = {
         type = 'job', -- job/gang
         name = {"gouv", "ambulance", "police", "pompier", "bcso"}
     },
-    [11] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
-        type = 'job', -- job/gang
-        name = {"bcso"}
-    },
-    [12] = { -- channel id GOUVERNEMENT POLICE POMPIER EMS (radio de crise)
-        type = 'job', -- job/gang
-        name = {"police", "bcso"}
-    },
+    
     -- [420] = { -- channel id
     --     type = 'gang', -- job/gang
     --     name = {"ballas"}
