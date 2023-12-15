@@ -9,6 +9,8 @@ AddEventHandler('onResourceStart', function(resource)
     if GetCurrentResourceName() == resource then
         if Shared.Core == 'qb' and LocalPlayer.state.isLoggedIn  then
             Radio:QBInit()
+        elseif Shared.Core == 'qbx' and LocalPlayer.state.isLoggedIn  then
+            Radio:QboxInit()
         elseif Shared.Core == 'esx' and ESX.IsPlayerLoaded() then
             Radio:ESXInit()
         end
@@ -25,31 +27,23 @@ AddEventHandler('onResourceStop', function(resource)
 end)
 
 RegisterNetEvent('mm_radio:client:use', function()
-    if CanPlayerOpenRadio() then
-        Radio.usingRadio = true
-        SetNuiFocus(true, true)
-        Radio:toggleRadioAnimation(true)
-        Radio:SendSvelteMessage("setRadioVisible", {
-            onRadio = Radio.onRadio,
-            channel = Radio.RadioChannel,
-            volume = Radio.Volume,
-            favourite = Radio.favourite,
-            recomended = Radio.recomended,
-            userData = Radio.userData,
-            time = Radio:CalculateTimeToDisplay(),
-            street = Radio:getCrossroads(),
-            maxChannel = Shared.MaxFrequency,
-            locale = Radio.locale.ui
-        })
-    
-        updateTime()
-    else
-        lib.notify({
-            title = 'Aucunes radios trouvées',
-            description = "Veuillez vous équiper d'une radio",
-            type = 'error'
-        })
-    end
+    Radio.usingRadio = true
+    SetNuiFocus(true, true)
+    Radio:toggleRadioAnimation(true)
+    Radio:SendSvelteMessage("setRadioVisible", {
+        onRadio = Radio.onRadio,
+        channel = Radio.RadioChannel,
+        volume = Radio.Volume,
+        favourite = Radio.favourite,
+        recomended = Radio.recomended,
+        userData = Radio.userData,
+        time = Radio:CalculateTimeToDisplay(),
+        street = Radio:getCrossroads(),
+        maxChannel = Shared.MaxFrequency,
+        locale = Radio.locale
+    })
+
+    updateTime()
 end)
 
 RegisterNetEvent('mm_radio:client:remove', function()

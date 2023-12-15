@@ -9,7 +9,7 @@ Shared.JobUsingCallsign = {  -- affichage matricules sur overlay
 }
 
 Shared.RestrictedChannels = {
-    [1] = { -- channel id POLICE 
+    [1] = { -- channel id POLICE
         type = 'job', -- job/gang
         name = {"police", "bcso"}
     },
@@ -51,16 +51,16 @@ Shared.RestrictedChannels = {
     },
     
     -- [420] = { -- channel id
-    --     type = 'gang', -- job/gang
-    --     name = {"ballas"}
+        --     type = 'gang', -- job/gang
+        --     name = {"ballas"}
     -- },
     -- [421] = { -- channel id
-    --     type = 'gang', -- job/gang
-    --     name = {"lostmc"}
+        --     type = 'gang', -- job/gang
+        --     name = {"lostmc"}
     -- },
     -- [422] = {
-    --     type = 'gang', -- job/gang
-    --     name = {"vagos"}
+        --     type = 'gang', -- job/gang
+        --     name = {"vagos"}
     -- },
 }
 

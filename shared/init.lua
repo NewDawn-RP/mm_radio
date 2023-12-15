@@ -1,10 +1,12 @@
 Shared = {}
 
 Shared.Ready = true -- dont Touch this
-Shared.UseCommand = true -- set to true to use command to open radio (item required)
+Shared.UseCommand = false -- set to true to use command to open radio (item required)
 
 if GetResourceState('qb-core') == 'started' then -- change your core script
     Shared.Core = 'qb' -- dont touch this
+elseif GetResourceState('qbx_core') == 'started' then -- change your core script
+    Shared.Core = 'qbx' -- dont touch this
 elseif GetResourceState('es_extended') == 'started' then -- change your core script
     Shared.Core = 'esx' -- dont touch this
 else
