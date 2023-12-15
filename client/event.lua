@@ -41,7 +41,7 @@ if CanPlayerOpenRadio() then
         time = Radio:CalculateTimeToDisplay(),
         street = Radio:getCrossroads(),
         maxChannel = Shared.MaxFrequency,
-        locale = Radio.locale.ui
+        locale = Radio.locale
     })
 
     updateTime()
