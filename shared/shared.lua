@@ -11,7 +11,7 @@ Shared.JobUsingCallsign = {  -- affichage matricules sur overlay
 Shared.RestrictedChannels = {
     [1] = { -- channel id POLICE
         type = 'job', -- job/gang
-        name = {"police", "bcso"}
+        name = {"police", "bcso", "gouv"}
     },
     [2] = { -- channel id POLICE 2
         type = 'job', -- job/gang
