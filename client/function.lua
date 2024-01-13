@@ -182,7 +182,7 @@ end
 CreateThread(function()
     while true do
         Wait(1000)
-        if LocalPlayer.state.isLoggedIn then
+        if Radio.playerLoaded then
             if not Radio.hasRadio and Radio.onRadio and Shared.Inventory then
                 Radio:leaveradio()
             end
